@@ -81,7 +81,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 		launcherintent.addCategory("android.intent.category.LAUNCHER");
 
 
-		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, launcherintent, 0);
+		PendingIntent contentIntent = PendingIntent.getActivity(this, notifyID, launcherintent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 		// the next two lines initialize the Notification, using the
 		// configurations above
